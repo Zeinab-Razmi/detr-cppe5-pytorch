@@ -1,0 +1,42 @@
+{
+  "original_train_counts": {
+    "Coverall": 1083,
+    "Face_Shield": 403,
+    "Gloves": 1211,
+    "Goggles": 352,
+    "Mask": 1188
+  },
+  "split_counts": {
+    "train": {
+      "Coverall": 914,
+      "Face_Shield": 335,
+      "Gloves": 1021,
+      "Goggles": 292,
+      "Mask": 991
+    },
+    "validation": {
+      "Coverall": 169,
+      "Face_Shield": 68,
+      "Gloves": 190,
+      "Goggles": 60,
+      "Mask": 197
+    },
+    "test": {
+      "Coverall": 45,
+      "Face_Shield": 17,
+      "Gloves": 61,
+      "Goggles": 32,
+      "Mask": 52
+    }
+  },
+  "images_per_split": {
+    "train": 809,
+    "validation": 143,
+    "test": 29
+  },
+  "mean_boxes_per_image": {
+    "train": 4.3918417799752785,
+    "validation": 4.783216783216783,
+    "test": 7.137931034482759
+  }
+}

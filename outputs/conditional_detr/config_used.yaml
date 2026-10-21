@@ -1,0 +1,57 @@
+model_choice: conditional_detr
+seed: 1337
+data:
+  dataset: danelcsb/cppe-5-v2
+  image_size: 480
+  val_ratio: 0.15
+  stratify_priority:
+  - Goggles
+  - Face_Shield
+  - Coverall
+  - Mask
+  - Gloves
+  stratify_fallback: Gloves
+  num_workers: 2
+train:
+  seed: 42
+  epochs: 30
+  batch_size: 8
+  eval_batch_size: 8
+  learning_rate: 5.0e-05
+  weight_decay: 0.0001
+  lr_scheduler: cosine
+  warmup_steps: 0
+  max_grad_norm: 0.01
+  gradient_accumulation_steps: 1
+  log_every_n_steps: 20
+  metric_for_best_model: map
+  greater_is_better: true
+  early_stopping_patience: null
+evaluation:
+  threshold: 0.0
+  use_nms: false
+inference:
+  image: https://images.pexels.com/photos/8413299/pexels-photo-8413299.jpeg?auto=compress&cs=tinysrgb&w=630&h=375&dpr=2
+  test_indices: []
+  num_test_images: 8
+output:
+  dir: outputs
+  show_plots: false
+export:
+  opset: 17
+  atol: 0.001
+models:
+  detr:
+    name: facebook/detr-resnet-50
+    inference_threshold: 0.4
+    fp16: false
+    use_nms: true
+    nms_iou: 0.5
+    resize_mode: fixed_canvas
+  conditional_detr:
+    name: microsoft/conditional-detr-resnet-50
+    inference_threshold: 0.3
+    fp16: true
+    use_nms: false
+    nms_iou: 0.5
+    resize_mode: edges

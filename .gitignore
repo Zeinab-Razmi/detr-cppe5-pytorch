@@ -1,0 +1,19 @@
+# Large model files (over GitHub's 100 MB limit)
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Notebooks / IDE / OS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_

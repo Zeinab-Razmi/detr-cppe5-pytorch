@@ -1,0 +1,62 @@
+{
+  "source": "https://images.pexels.com/photos/8413299/pexels-photo-8413299.jpeg?auto=compress&cs=tinysrgb&w=630&h=375&dpr=2",
+  "threshold": 0.45,
+  "nms": true,
+  "detections": [
+    {
+      "label": "Mask",
+      "label_id": 4,
+      "score": 0.9372,
+      "box": [
+        335.76,
+        171.71,
+        506.49,
+        283.39
+      ]
+    },
+    {
+      "label": "Coverall",
+      "label_id": 0,
+      "score": 0.8483,
+      "box": [
+        676.07,
+        2.4,
+        1122.85,
+        742.16
+      ]
+    },
+    {
+      "label": "Gloves",
+      "label_id": 2,
+      "score": 0.8413,
+      "box": [
+        566.42,
+        306.46,
+        704.82,
+        433.62
+      ]
+    },
+    {
+      "label": "Gloves",
+      "label_id": 2,
+      "score": 0.8083,
+      "box": [
+        427.03,
+        410.52,
+        594.64,
+        527.75
+      ]
+    },
+    {
+      "label": "Coverall",
+      "label_id": 0,
+      "score": 0.4605,
+      "box": [
+        124.54,
+        12.14,
+        599.07,
+        738.97
+      ]
+    }
+  ]
+}
